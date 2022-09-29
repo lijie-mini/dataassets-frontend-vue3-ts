@@ -2,9 +2,21 @@
   <div id="nav">
     <router-link to="/">Home</router-link> |
     <router-link to="/about">About</router-link>
+    <el-button type="primary" @click="open">按钮</el-button>
   </div>
-  <router-view/>
+  <router-view />
 </template>
+<script lang="ts">
+import {ElMessage} from "element-plus"
+export default {
+  setup() {
+    const open = () => {
+      ElMessage("this is a message.");
+    };
+    return { open };
+  },
+};
+</script>
 
 <style>
 #app {
