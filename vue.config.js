@@ -5,17 +5,18 @@ const { ElementPlusResolver } = require('unplugin-vue-components/resolvers')
 const path = require("path");
 
 module.exports = {
+  runtimeCompiler: true,
   css: {
     loaderOptions: {
       scss: {
-        additionalData: `@import "~/style/element.scss"`
+        additionalData: `@use "@/styles/element.scss" as *;`//引入自定义主题色的文件
       }
     }
   },
   configureWebpack: {
     resolve: {
       alias: {
-        '~/': `${path.resolve(__dirname, 'src')}/`,
+        '@': `${path.join(__dirname, 'src')}`,
       },
     },
     plugins: [
@@ -26,11 +27,14 @@ module.exports = {
       Components({
         resolvers: [ElementPlusResolver()]
       }),
-      //命令式UI组件引入时引入样式
+      //命令式UI组件引入时引入样式，可自定义主题色
       ElementPlus({
-        // importStyle: "scss",
         useSource: true
       })
     ]
+  },
+  devServer: {
+    hot: true,
+    port: 8000
   }
 }

@@ -1,0 +1,76 @@
+
+// theme color
+$color-primary: #2c62ff;
+$color-warning: #ff8113;
+$color-danger: #e60012;
+$color-success: #009944;
+$color-aqua: #29c1cc;
+$color-white: #ffffff;
+$color-pink: #e56e74;
+$color-green: #67ad48;
+
+// layout color
+$color-header: #0c0035;
+$background-color-dark: #0c0035;
+$color-footer: #090029;
+$color-scrollbar: rgba(0, 0, 0, 0.05);
+$color-scrollbar-hover: rgba(0, 0, 0, 0.1);
+
+// font color
+$color-text-primary: #303133;
+$color-text-regular: #606266;
+$color-text-secondary: #909399;
+$color-text-placeholder: #c0c4cc;
+
+// font size
+$font-size-large: 18px;
+$font-size-medium: 16px;
+$font-size-base: 14px;
+$font-size-small: 12px;
+
+// background color
+$background-color-dark: #020421;
+$background-color-deep: mix($color-primary, $color-white, 6%);
+$background-color-medium: mix($color-primary, $color-white, 4%);
+$background-color-shallow: mix($color-primary, $color-white, 2%);
+
+// border
+$color-border: #ebeef5;
+$border-radius-base: 4px;
+
+// shadow
+$shadow-primary: 0 2px 12px 0 rgba(0, 0, 0, 0.1);
+
+// transition
+$transition-primary: all 225ms cubic-bezier(0, 0, 0.2, 1);
+
+// margin
+$margin-bottom-filter-base: 12px;
+
+// echarts
+$color-axis-line: rgba(255, 255, 255, 0.5);
+$color-splite-line: rgba(255, 255, 255, 0.1);
+
+// 数值
+$pixel-1x: 12px;
+$pixel-2x: 24px;
+$pixel-3x: 36px;
+$pixel-4x: 48px;
+$pixel-5x: 60px;
+$pixel-6x: 72px;
+
+:export {
+  //
+  COLOR_PRIMARY: $color-primary;
+  COLOR_WARNING: $color-warning;
+  COLOR_SUCCESS: $color-success;
+  COLOR_DANGER: $color-danger;
+  COLOR_AQUA: $color-aqua;
+  //
+  FONT_SIZE_SMALL: $font-size-small;
+  //
+  COLOR_TEXT_PLACEHOLDER: $color-text-placeholder;
+  //
+  COLOR_AXIS_LINE: $color-axis-line;
+  COLOR_SPLITE_LINE: $color-splite-line;
+}
